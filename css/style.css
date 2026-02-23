@@ -1,7 +1,7 @@
 /* 
 * Theme: Minimalist & Luxury
 * Author: Trae AI
-* For: Ana Cicília Biffet
+* For: Ana Cicília Buffet
 */
 
 :root {
@@ -429,6 +429,78 @@ nav {
     margin-left: 10px;
 }
 
+/* Events & Testimonials */
+.events-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.event-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.event-img {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.event-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-item:hover .event-img img {
+    transform: scale(1.05);
+}
+
+.event-content {
+    flex: 1;
+    padding: 1rem;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+.testimonial-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.client-name {
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
 /* Contact Section */
 .contact-wrapper {
     display: flex;
@@ -613,5 +685,23 @@ footer {
     
     .section-title {
         font-size: 2rem;
+    }
+
+    .event-item {
+        flex-direction: column;
+    }
+
+    .event-item.reverse {
+        flex-direction: column;
+    }
+
+    .event-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .event-content {
+        text-align: center;
+        padding-top: 20px;
     }
 }
