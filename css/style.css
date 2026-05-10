@@ -377,6 +377,8 @@ nav {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-card:hover {
@@ -386,6 +388,7 @@ nav {
 .menu-img {
     height: 200px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .menu-img img {
@@ -401,6 +404,9 @@ nav {
 
 .menu-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .menu-content h3 {
@@ -412,6 +418,7 @@ nav {
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 20px;
+    flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante, empurrando o link para baixo */
 }
 
 .link-details {
@@ -419,6 +426,7 @@ nav {
     font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
+    margin-top: auto; /* Garante que fique no final */
 }
 
 .link-details i {
